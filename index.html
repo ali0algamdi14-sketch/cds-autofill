@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CDS AutoFill — Smart Prescription Entry</title>
+<meta name="description" content="A browser extension that assists pharmacists with faster, safer prescription data entry into CDS workflows.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<nav>
+  <a class="brand" href="./"><img src="icon.png" alt="CDS AutoFill icon"><span>CDS AutoFill</span></a>
+  <div class="navlinks"><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="privacy.html">Privacy Policy</a></div>
+</nav>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="badge">⚡ Smart Prescription Entry</div>
+    <h1>Faster.<br><span>Safer.</span><br>Smarter.</h1>
+    <p class="lead">CDS AutoFill is a browser extension designed to assist pharmacists with prescription data entry. It extracts prescription text, presents a review step, and fills supported CDS fields only after pharmacist confirmation.</p>
+    <div class="cta">
+      <a class="btn primary" href="#features">Explore Features</a>
+      <a class="btn secondary" href="privacy.html">Privacy Policy</a>
+    </div>
+    <p class="small">Independent software. Not affiliated with or endorsed by SFDA, Raqeeb, or any government authority.</p>
+  </div>
+  <div class="mock">
+    <div class="top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="card"><div class="k">Workflow</div><div class="v">Paste prescription → Review → Fill</div></div>
+    <div class="card"><div class="k">Processing</div><div class="v ok">Local on the pharmacist's device</div></div>
+    <div class="card"><div class="k">Safety</div><div class="v">Pharmacist confirmation required before fill</div></div>
+    <div class="card"><div class="k">Status</div><div class="v">Beta</div></div>
+  </div>
+</section>
+
+<section id="features">
+  <h2 class="section-title">Built for practical pharmacy workflow</h2>
+  <p class="section-sub">The extension assists with repetitive data-entry tasks while keeping the pharmacist in control of every prescription.</p>
+  <div class="grid">
+    <div class="feature"><div class="iconbox">📋</div><h3>Prescription parsing</h3><p>Extracts supported patient, prescription, physician, institution and medication fields from pasted prescription text.</p></div>
+    <div class="feature"><div class="iconbox">🧠</div><h3>Smart duration</h3><p>Compares written duration with a local calculation based on quantity, strength, dose and frequency. Conflicts are sent for manual review.</p></div>
+    <div class="feature"><div class="iconbox">✅</div><h3>Review before fill</h3><p>Parsed values are shown to the pharmacist before supported CDS fields are populated.</p></div>
+    <div class="feature"><div class="iconbox">🔒</div><h3>Local processing</h3><p>Prescription and patient data are processed locally by the extension. They are not sent to an external prescription-processing server.</p></div>
+    <div class="feature"><div class="iconbox">📊</div><h3>Local logs & export</h3><p>Supported usage logs can remain in the browser and be exported locally by the user.</p></div>
+    <div class="feature"><div class="iconbox">🧑‍⚕️</div><h3>Pharmacist-controlled</h3><p>CDS AutoFill is a data-entry assistant. It does not replace professional judgment or make dispensing decisions.</p></div>
+  </div>
+</section>
+
+<section id="privacy">
+  <h2 class="section-title">Privacy by design</h2>
+  <div class="notice">
+    Patient names, identifiers, diagnoses and prescription details are intended to stay on the pharmacist's device during normal use. A commercial licensing system may transmit only licensing-related information such as a license key, installation identifier, extension version and license status. It must not receive patient or prescription data.
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footerrow">
+    <div>© 2026 CDS AutoFill — by Dr. Ali</div>
+    <div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+</div>
+</body>
+</html>
