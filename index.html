@@ -1,66 +1,118 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
 <title>CDS AutoFill — Smart Prescription Entry</title>
-<meta name="description" content="CDS AutoFill — أداة متصفح تساعد الصيادلة على إدخال بيانات الوصفات بسرعة وأمان مع إبقاء المراجعة بيد الصيدلي.">
+<meta name="description" content="CDS AutoFill — أداة متصفح تساعد الصيادلة على إدخال بيانات الوصفات بسرعة أكبر مع مراجعة الصيدلي ومعالجة محلية للبيانات.">
+<link rel="icon" href="icon.png">
 <link rel="stylesheet" href="styles.css">
-<script>
-(function(){const l=localStorage.getItem('cdsSiteLang')||'ar';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';})();
-</script>
+<script>(function(){const l=localStorage.getItem('cdsSiteLang')||'ar';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';})();</script>
 </head>
 <body>
-<div class="container">
-<nav>
-  <a class="brand" href="./"><img src="icon.png" alt="CDS AutoFill icon"><span>CDS AutoFill</span></a>
-  <div class="navright">
-    <div class="navlinks"><a href="#features" data-ar="المميزات" data-en="Features"></a><a href="#privacy" data-ar="الخصوصية" data-en="Privacy"></a><a href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy"></a></div>
-    <button class="langbtn" id="langToggle" type="button" aria-label="Change language">English</button>
+<div class="page-glow glow-a"></div><div class="page-glow glow-b"></div>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="CDS AutoFill icon"><span><b>CDS AutoFill</b><small>Smart Prescription Entry</small></span></a>
+    <div class="navright">
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#features" data-ar="المميزات" data-en="Features"></a>
+        <a href="#workflow" data-ar="كيف يعمل" data-en="How it works"></a>
+        <a href="#privacy" data-ar="الخصوصية" data-en="Privacy"></a>
+        <a href="privacy.html" data-ar="السياسة" data-en="Policy"></a>
+      </nav>
+      <button class="langbtn" id="langToggle" type="button" aria-label="Change language">English</button>
+    </div>
   </div>
-</nav>
+</header>
 
 <main>
-<section class="hero">
-  <div>
-    <div class="badge" data-ar="⚡ إدخال ذكي للوصفات" data-en="⚡ Smart Prescription Entry"></div>
-    <h1><span data-ar="أسرع." data-en="Faster."></span><br><span class="accent" data-ar="أكثر أمانًا." data-en="Safer."></span><br><span data-ar="أذكى." data-en="Smarter."></span></h1>
-    <p class="lead" data-ar="CDS AutoFill هي إضافة للمتصفح صُممت لمساعدة الصيادلة في إدخال بيانات الوصفات. تستخرج بيانات الوصفة، تعرضها للمراجعة، ثم تعبئ الحقول المدعومة في CDS فقط بعد تأكيد الصيدلي." data-en="CDS AutoFill is a browser extension designed to assist pharmacists with prescription data entry. It extracts prescription text, presents a review step, and fills supported CDS fields only after pharmacist confirmation."></p>
+<section class="hero container">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span><span data-ar="مساعد إدخال وصفات للصيادلة" data-en="Prescription-entry assistant for pharmacists"></span></div>
+    <h1 data-ar="حوّل إدخال الوصفات من مهمة متكررة إلى سير عمل أسرع." data-en="Turn repetitive prescription entry into a faster workflow."></h1>
+    <p class="lead" data-ar="CDS AutoFill يقرأ نص الوصفة محليًا، يرتب البيانات في شاشة مراجعة واضحة، ثم يعبّئ الحقول المدعومة في CDS بعد تأكيد الصيدلي." data-en="CDS AutoFill reads prescription text locally, organizes the extracted data into a clear review screen, then fills supported CDS fields after pharmacist confirmation."></p>
     <div class="cta">
-      <a class="btn primary" href="#features" data-ar="استكشف المميزات" data-en="Explore Features"></a>
-      <a class="btn secondary" href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy"></a>
+      <a class="btn primary" href="#workflow"><span data-ar="شاهد كيف يعمل" data-en="See how it works"></span><span class="arrow">↗</span></a>
+      <a class="btn secondary" href="#features" data-ar="استكشف المميزات" data-en="Explore features"></a>
     </div>
-    <p class="small" data-ar="برنامج مستقل. غير تابع أو معتمد من هيئة الغذاء والدواء السعودية (SFDA) أو رقيب أو أي جهة حكومية." data-en="Independent software. Not affiliated with or endorsed by SFDA, Raqeeb, or any government authority."></p>
+    <div class="trust-row">
+      <div class="trust-item"><span>✓</span><b data-ar="معالجة محلية" data-en="Local processing"></b></div>
+      <div class="trust-item"><span>✓</span><b data-ar="مراجعة قبل التعبئة" data-en="Review before fill"></b></div>
+      <div class="trust-item"><span>✓</span><b data-ar="الصيدلي صاحب القرار" data-en="Pharmacist-controlled"></b></div>
+    </div>
+    <p class="disclaimer" data-ar="برنامج مستقل، غير تابع أو معتمد من SFDA أو رقيب أو أي جهة حكومية." data-en="Independent software. Not affiliated with or endorsed by SFDA, Raqeeb, or any government authority."></p>
   </div>
-  <div class="mock">
-    <div class="top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-    <div class="card"><div class="k" data-ar="سير العمل" data-en="Workflow"></div><div class="v" data-ar="لصق الوصفة ← مراجعة ← تعبئة" data-en="Paste prescription → Review → Fill"></div></div>
-    <div class="card"><div class="k" data-ar="المعالجة" data-en="Processing"></div><div class="v ok" data-ar="محليًا على جهاز الصيدلي" data-en="Local on the pharmacist's device"></div></div>
-    <div class="card"><div class="k" data-ar="الأمان" data-en="Safety"></div><div class="v" data-ar="يتطلب تأكيد الصيدلي قبل التعبئة" data-en="Pharmacist confirmation required before fill"></div></div>
-    <div class="card"><div class="k" data-ar="الحالة" data-en="Status"></div><div class="v" data-ar="نسخة تجريبية" data-en="Beta"></div></div>
+
+  <div class="product-window" aria-label="CDS AutoFill preview">
+    <div class="window-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>CDS AutoFill</span><div class="secure-chip">Local</div></div>
+    <div class="product-body">
+      <div class="product-sidebar">
+        <img src="icon.png" alt=""><div class="side-line active"></div><div class="side-line"></div><div class="side-line short"></div><div class="side-spacer"></div><div class="side-badge">PRO</div>
+      </div>
+      <div class="review-panel">
+        <div class="review-head"><div><small data-ar="مراجعة الوصفة" data-en="Prescription review"></small><strong data-ar="تحقق قبل التعبئة" data-en="Review before fill"></strong></div><span class="status-pill" data-ar="جاهز للمراجعة" data-en="Ready to review"></span></div>
+        <div class="review-grid">
+          <div class="field wide"><span data-ar="اسم المريض" data-en="Patient name"></span><b>•••• •••• ••••</b></div>
+          <div class="field"><span data-ar="رقم الوصفة" data-en="Prescription ID"></span><b>RX-••••••</b></div>
+          <div class="field"><span data-ar="المدة" data-en="Duration"></span><b>30 <em data-ar="يوم" data-en="days"></em></b></div>
+          <div class="field wide"><span data-ar="الدواء" data-en="Medication"></span><b>Medication 150 mg</b></div>
+        </div>
+        <div class="duration-card"><div><span class="mini-icon">⌁</span><div><small data-ar="Smart Duration" data-en="Smart Duration"></small><b data-ar="المدة المكتوبة متوافقة مع الحساب" data-en="Written duration matches local calculation"></b></div></div><span class="check">✓</span></div>
+        <div class="review-actions"><button class="ghost" data-ar="رجوع" data-en="Back"></button><button class="fill" data-ar="تأكيد وتعبئة" data-en="Confirm & fill"></button></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="features">
-  <h2 class="section-title" data-ar="مصمم لسير عمل الصيدلية الحقيقي" data-en="Built for practical pharmacy workflow"></h2>
-  <p class="section-sub" data-ar="تساعد الإضافة في مهام إدخال البيانات المتكررة مع إبقاء الصيدلي متحكمًا في كل وصفة." data-en="The extension assists with repetitive data-entry tasks while keeping the pharmacist in control of every prescription."></p>
-  <div class="grid">
-    <div class="feature"><div class="iconbox">📋</div><h3 data-ar="تحليل الوصفة" data-en="Prescription parsing"></h3><p data-ar="يستخرج الحقول المدعومة للمريض والوصفة والطبيب والمنشأة والدواء من نص الوصفة الملصق." data-en="Extracts supported patient, prescription, physician, institution and medication fields from pasted prescription text."></p></div>
-    <div class="feature"><div class="iconbox">🧠</div><h3 data-ar="المدة الذكية" data-en="Smart duration"></h3><p data-ar="يقارن المدة المكتوبة بحساب محلي يعتمد على الكمية والتركيز والجرعة والتكرار، ويحوّل التعارضات للمراجعة اليدوية." data-en="Compares written duration with a local calculation based on quantity, strength, dose and frequency. Conflicts are sent for manual review."></p></div>
-    <div class="feature"><div class="iconbox">✅</div><h3 data-ar="مراجعة قبل التعبئة" data-en="Review before fill"></h3><p data-ar="تُعرض القيم المستخرجة للصيدلي قبل تعبئة الحقول المدعومة في CDS." data-en="Parsed values are shown to the pharmacist before supported CDS fields are populated."></p></div>
-    <div class="feature"><div class="iconbox">🔒</div><h3 data-ar="معالجة محلية" data-en="Local processing"></h3><p data-ar="تُعالج بيانات المريض والوصفة محليًا داخل الإضافة ولا تُرسل إلى خادم خارجي لمعالجة الوصفات." data-en="Prescription and patient data are processed locally by the extension. They are not sent to an external prescription-processing server."></p></div>
-    <div class="feature"><div class="iconbox">📊</div><h3 data-ar="سجلات وتصدير محلي" data-en="Local logs & export"></h3><p data-ar="يمكن أن تبقى سجلات الاستخدام المدعومة داخل المتصفح مع إمكانية تصديرها محليًا بواسطة المستخدم." data-en="Supported usage logs can remain in the browser and be exported locally by the user."></p></div>
-    <div class="feature"><div class="iconbox">🧑‍⚕️</div><h3 data-ar="تحت تحكم الصيدلي" data-en="Pharmacist-controlled"></h3><p data-ar="CDS AutoFill مساعد لإدخال البيانات ولا يستبدل الحكم المهني ولا يتخذ قرارات الصرف." data-en="CDS AutoFill is a data-entry assistant. It does not replace professional judgment or make dispensing decisions."></p></div>
+<section class="metrics-strip">
+ <div class="container metrics">
+   <div><strong>3</strong><span data-ar="خطوات من اللصق إلى التعبئة" data-en="steps from paste to fill"></span></div>
+   <div><strong>100%</strong><span data-ar="معالجة الوصفة محليًا" data-en="local prescription processing"></span></div>
+   <div><strong>1</strong><span data-ar="مراجعة بشرية قبل التعبئة" data-en="human review before fill"></span></div>
+ </div>
+</section>
+
+<section id="features" class="container section-block">
+  <div class="section-heading"><div><span class="section-kicker" data-ar="مصمم للعمل الفعلي" data-en="Built for real workflow"></span><h2 data-ar="أقل إدخال يدوي. وضوح أكبر." data-en="Less manual entry. More clarity."></h2></div><p data-ar="أدوات عملية للمهام المتكررة مع الحفاظ على المراجعة المهنية بيد الصيدلي." data-en="Practical tools for repetitive tasks while keeping professional review in the pharmacist's hands."></p></div>
+  <div class="feature-grid">
+    <article class="feature featured"><div class="feature-icon">⌘</div><span class="feature-num">01</span><h3 data-ar="تحليل الوصفة" data-en="Prescription parsing"></h3><p data-ar="استخراج الحقول المدعومة للمريض والوصفة والطبيب والمنشأة والدواء من النص الملصق." data-en="Extract supported patient, prescription, physician, institution and medication fields from pasted text."></p></article>
+    <article class="feature"><div class="feature-icon">⌁</div><span class="feature-num">02</span><h3 data-ar="Smart Duration" data-en="Smart Duration"></h3><p data-ar="مقارنة المدة المكتوبة بحساب محلي يعتمد على الكمية والتركيز والجرعة والتكرار، مع تحويل التعارض للمراجعة." data-en="Compare written duration with a local calculation using quantity, strength, dose and frequency, and route conflicts to review."></p></article>
+    <article class="feature"><div class="feature-icon">✓</div><span class="feature-num">03</span><h3 data-ar="مراجعة قبل التعبئة" data-en="Review before fill"></h3><p data-ar="عرض القيم المستخرجة بوضوح قبل تعبئة الحقول المدعومة." data-en="Show extracted values clearly before supported fields are populated."></p></article>
+    <article class="feature"><div class="feature-icon">◈</div><span class="feature-num">04</span><h3 data-ar="معالجة محلية" data-en="Local processing"></h3><p data-ar="بيانات المريض والوصفة تُعالج داخل الإضافة ولا تُرسل لخادم خارجي لمعالجة الوصفات." data-en="Patient and prescription data are processed inside the extension and are not sent to an external prescription-processing server."></p></article>
+    <article class="feature"><div class="feature-icon">⇩</div><span class="feature-num">05</span><h3 data-ar="سجلات وتصدير" data-en="Logs & export"></h3><p data-ar="حفظ السجلات المدعومة داخل المتصفح وتصديرها محليًا عند الحاجة." data-en="Keep supported logs in the browser and export them locally when needed."></p></article>
+    <article class="feature"><div class="feature-icon">Rx</div><span class="feature-num">06</span><h3 data-ar="تحت تحكم الصيدلي" data-en="Pharmacist-controlled"></h3><p data-ar="مساعد لإدخال البيانات فقط؛ لا يستبدل الحكم المهني ولا يتخذ قرارات الصرف." data-en="A data-entry assistant only; it does not replace professional judgment or make dispensing decisions."></p></article>
   </div>
 </section>
 
-<section id="privacy">
-  <h2 class="section-title" data-ar="الخصوصية من أساس التصميم" data-en="Privacy by design"></h2>
-  <div class="notice" data-ar="أسماء المرضى ومعرّفاتهم وتشخيصاتهم وتفاصيل الوصفات مصممة لتبقى على جهاز الصيدلي أثناء الاستخدام الطبيعي. قد يرسل نظام الترخيص التجاري معلومات متعلقة بالترخيص فقط، مثل مفتاح الترخيص ومعرّف تثبيت عشوائي وإصدار الإضافة وحالة الترخيص. ولا تُرسل بيانات المرضى أو الوصفات ضمن طلبات الترخيص." data-en="Patient names, identifiers, diagnoses and prescription details are intended to stay on the pharmacist's device during normal use. A commercial licensing system may transmit only licensing-related information such as a license key, installation identifier, extension version and license status. It must not receive patient or prescription data."></div>
+<section id="workflow" class="workflow-section">
+  <div class="container section-block">
+    <div class="section-heading compact"><div><span class="section-kicker" data-ar="سير عمل واضح" data-en="A clear workflow"></span><h2 data-ar="ثلاث خطوات. بدون تعقيد." data-en="Three steps. No clutter."></h2></div></div>
+    <div class="steps">
+      <div class="step"><span>01</span><div><h3 data-ar="الصق الوصفة" data-en="Paste the prescription"></h3><p data-ar="انسخ نص الوصفة والصقه في CDS AutoFill." data-en="Copy the prescription text and paste it into CDS AutoFill."></p></div></div>
+      <div class="step-arrow">→</div>
+      <div class="step"><span>02</span><div><h3 data-ar="راجع البيانات" data-en="Review the data"></h3><p data-ar="تحقق من الحقول المستخرجة والمدة وأي تعارض يحتاج قرارك." data-en="Check the parsed fields, duration and any conflict that needs your decision."></p></div></div>
+      <div class="step-arrow">→</div>
+      <div class="step"><span>03</span><div><h3 data-ar="أكد التعبئة" data-en="Confirm the fill"></h3><p data-ar="بعد تأكيدك فقط، تُعبأ الحقول المدعومة في CDS." data-en="Only after your confirmation are supported CDS fields populated."></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="container privacy-card">
+  <div class="privacy-icon">⌾</div>
+  <div><span class="section-kicker" data-ar="Privacy by design" data-en="Privacy by design"></span><h2 data-ar="بيانات الوصفة تبقى حيث يجب أن تبقى." data-en="Prescription data stays where it should."></h2><p data-ar="أسماء المرضى والمعرّفات والتشخيصات وتفاصيل الوصفات مصممة لتبقى على جهاز الصيدلي أثناء الاستخدام الطبيعي. نظام الترخيص لا يحتاج بيانات المريض أو الوصفة." data-en="Patient names, identifiers, diagnoses and prescription details are designed to stay on the pharmacist's device during normal use. The licensing system does not need patient or prescription data."></p><a href="privacy.html" class="text-link"><span data-ar="اقرأ سياسة الخصوصية" data-en="Read the privacy policy"></span> ↗</a></div>
+</section>
+
+<section class="container final-cta">
+  <div><span class="section-kicker">CDS AutoFill</span><h2 data-ar="Faster • Safer • Smarter" data-en="Faster • Safer • Smarter"></h2><p data-ar="إدخال أذكى للوصفات، مع بقاء القرار بيد الصيدلي." data-en="Smarter prescription entry, with the pharmacist still in control."></p></div>
+  <a class="btn secondary" href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy policy"></a>
 </section>
 </main>
 
-<footer><div class="footerrow"><div>© 2026 CDS AutoFill — by Dr. Ali</div><div><a href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy"></a></div></div></footer>
-</div>
+<footer>
+ <div class="container footerrow"><div class="footer-brand"><img src="icon.png" alt=""><div><b>CDS AutoFill</b><span>by Dr. Ali</span></div></div><div class="footer-links"><a href="#features" data-ar="المميزات" data-en="Features"></a><a href="#privacy" data-ar="الخصوصية" data-en="Privacy"></a><a href="privacy.html" data-ar="السياسة" data-en="Policy"></a></div><div class="copyright">© 2026 CDS AutoFill</div></div>
+</footer>
 <script src="lang.js"></script>
 </body>
 </html>
