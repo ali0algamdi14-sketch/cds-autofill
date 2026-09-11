@@ -1,66 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CDS AutoFill — Smart Prescription Entry</title>
-<meta name="description" content="A browser extension that assists pharmacists with faster, safer prescription data entry into CDS workflows.">
+<meta name="description" content="CDS AutoFill — أداة متصفح تساعد الصيادلة على إدخال بيانات الوصفات بسرعة وأمان مع إبقاء المراجعة بيد الصيدلي.">
 <link rel="stylesheet" href="styles.css">
+<script>
+(function(){const l=localStorage.getItem('cdsSiteLang')||'ar';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';})();
+</script>
 </head>
 <body>
 <div class="container">
 <nav>
   <a class="brand" href="./"><img src="icon.png" alt="CDS AutoFill icon"><span>CDS AutoFill</span></a>
-  <div class="navlinks"><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="privacy.html">Privacy Policy</a></div>
+  <div class="navright">
+    <div class="navlinks"><a href="#features" data-ar="المميزات" data-en="Features"></a><a href="#privacy" data-ar="الخصوصية" data-en="Privacy"></a><a href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy"></a></div>
+    <button class="langbtn" id="langToggle" type="button" aria-label="Change language">English</button>
+  </div>
 </nav>
 
 <main>
 <section class="hero">
   <div>
-    <div class="badge">⚡ Smart Prescription Entry</div>
-    <h1>Faster.<br><span>Safer.</span><br>Smarter.</h1>
-    <p class="lead">CDS AutoFill is a browser extension designed to assist pharmacists with prescription data entry. It extracts prescription text, presents a review step, and fills supported CDS fields only after pharmacist confirmation.</p>
+    <div class="badge" data-ar="⚡ إدخال ذكي للوصفات" data-en="⚡ Smart Prescription Entry"></div>
+    <h1><span data-ar="أسرع." data-en="Faster."></span><br><span class="accent" data-ar="أكثر أمانًا." data-en="Safer."></span><br><span data-ar="أذكى." data-en="Smarter."></span></h1>
+    <p class="lead" data-ar="CDS AutoFill هي إضافة للمتصفح صُممت لمساعدة الصيادلة في إدخال بيانات الوصفات. تستخرج بيانات الوصفة، تعرضها للمراجعة، ثم تعبئ الحقول المدعومة في CDS فقط بعد تأكيد الصيدلي." data-en="CDS AutoFill is a browser extension designed to assist pharmacists with prescription data entry. It extracts prescription text, presents a review step, and fills supported CDS fields only after pharmacist confirmation."></p>
     <div class="cta">
-      <a class="btn primary" href="#features">Explore Features</a>
-      <a class="btn secondary" href="privacy.html">Privacy Policy</a>
+      <a class="btn primary" href="#features" data-ar="استكشف المميزات" data-en="Explore Features"></a>
+      <a class="btn secondary" href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy"></a>
     </div>
-    <p class="small">Independent software. Not affiliated with or endorsed by SFDA, Raqeeb, or any government authority.</p>
+    <p class="small" data-ar="برنامج مستقل. غير تابع أو معتمد من هيئة الغذاء والدواء السعودية (SFDA) أو رقيب أو أي جهة حكومية." data-en="Independent software. Not affiliated with or endorsed by SFDA, Raqeeb, or any government authority."></p>
   </div>
   <div class="mock">
     <div class="top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-    <div class="card"><div class="k">Workflow</div><div class="v">Paste prescription → Review → Fill</div></div>
-    <div class="card"><div class="k">Processing</div><div class="v ok">Local on the pharmacist's device</div></div>
-    <div class="card"><div class="k">Safety</div><div class="v">Pharmacist confirmation required before fill</div></div>
-    <div class="card"><div class="k">Status</div><div class="v">Beta</div></div>
+    <div class="card"><div class="k" data-ar="سير العمل" data-en="Workflow"></div><div class="v" data-ar="لصق الوصفة ← مراجعة ← تعبئة" data-en="Paste prescription → Review → Fill"></div></div>
+    <div class="card"><div class="k" data-ar="المعالجة" data-en="Processing"></div><div class="v ok" data-ar="محليًا على جهاز الصيدلي" data-en="Local on the pharmacist's device"></div></div>
+    <div class="card"><div class="k" data-ar="الأمان" data-en="Safety"></div><div class="v" data-ar="يتطلب تأكيد الصيدلي قبل التعبئة" data-en="Pharmacist confirmation required before fill"></div></div>
+    <div class="card"><div class="k" data-ar="الحالة" data-en="Status"></div><div class="v" data-ar="نسخة تجريبية" data-en="Beta"></div></div>
   </div>
 </section>
 
 <section id="features">
-  <h2 class="section-title">Built for practical pharmacy workflow</h2>
-  <p class="section-sub">The extension assists with repetitive data-entry tasks while keeping the pharmacist in control of every prescription.</p>
+  <h2 class="section-title" data-ar="مصمم لسير عمل الصيدلية الحقيقي" data-en="Built for practical pharmacy workflow"></h2>
+  <p class="section-sub" data-ar="تساعد الإضافة في مهام إدخال البيانات المتكررة مع إبقاء الصيدلي متحكمًا في كل وصفة." data-en="The extension assists with repetitive data-entry tasks while keeping the pharmacist in control of every prescription."></p>
   <div class="grid">
-    <div class="feature"><div class="iconbox">📋</div><h3>Prescription parsing</h3><p>Extracts supported patient, prescription, physician, institution and medication fields from pasted prescription text.</p></div>
-    <div class="feature"><div class="iconbox">🧠</div><h3>Smart duration</h3><p>Compares written duration with a local calculation based on quantity, strength, dose and frequency. Conflicts are sent for manual review.</p></div>
-    <div class="feature"><div class="iconbox">✅</div><h3>Review before fill</h3><p>Parsed values are shown to the pharmacist before supported CDS fields are populated.</p></div>
-    <div class="feature"><div class="iconbox">🔒</div><h3>Local processing</h3><p>Prescription and patient data are processed locally by the extension. They are not sent to an external prescription-processing server.</p></div>
-    <div class="feature"><div class="iconbox">📊</div><h3>Local logs & export</h3><p>Supported usage logs can remain in the browser and be exported locally by the user.</p></div>
-    <div class="feature"><div class="iconbox">🧑‍⚕️</div><h3>Pharmacist-controlled</h3><p>CDS AutoFill is a data-entry assistant. It does not replace professional judgment or make dispensing decisions.</p></div>
+    <div class="feature"><div class="iconbox">📋</div><h3 data-ar="تحليل الوصفة" data-en="Prescription parsing"></h3><p data-ar="يستخرج الحقول المدعومة للمريض والوصفة والطبيب والمنشأة والدواء من نص الوصفة الملصق." data-en="Extracts supported patient, prescription, physician, institution and medication fields from pasted prescription text."></p></div>
+    <div class="feature"><div class="iconbox">🧠</div><h3 data-ar="المدة الذكية" data-en="Smart duration"></h3><p data-ar="يقارن المدة المكتوبة بحساب محلي يعتمد على الكمية والتركيز والجرعة والتكرار، ويحوّل التعارضات للمراجعة اليدوية." data-en="Compares written duration with a local calculation based on quantity, strength, dose and frequency. Conflicts are sent for manual review."></p></div>
+    <div class="feature"><div class="iconbox">✅</div><h3 data-ar="مراجعة قبل التعبئة" data-en="Review before fill"></h3><p data-ar="تُعرض القيم المستخرجة للصيدلي قبل تعبئة الحقول المدعومة في CDS." data-en="Parsed values are shown to the pharmacist before supported CDS fields are populated."></p></div>
+    <div class="feature"><div class="iconbox">🔒</div><h3 data-ar="معالجة محلية" data-en="Local processing"></h3><p data-ar="تُعالج بيانات المريض والوصفة محليًا داخل الإضافة ولا تُرسل إلى خادم خارجي لمعالجة الوصفات." data-en="Prescription and patient data are processed locally by the extension. They are not sent to an external prescription-processing server."></p></div>
+    <div class="feature"><div class="iconbox">📊</div><h3 data-ar="سجلات وتصدير محلي" data-en="Local logs & export"></h3><p data-ar="يمكن أن تبقى سجلات الاستخدام المدعومة داخل المتصفح مع إمكانية تصديرها محليًا بواسطة المستخدم." data-en="Supported usage logs can remain in the browser and be exported locally by the user."></p></div>
+    <div class="feature"><div class="iconbox">🧑‍⚕️</div><h3 data-ar="تحت تحكم الصيدلي" data-en="Pharmacist-controlled"></h3><p data-ar="CDS AutoFill مساعد لإدخال البيانات ولا يستبدل الحكم المهني ولا يتخذ قرارات الصرف." data-en="CDS AutoFill is a data-entry assistant. It does not replace professional judgment or make dispensing decisions."></p></div>
   </div>
 </section>
 
 <section id="privacy">
-  <h2 class="section-title">Privacy by design</h2>
-  <div class="notice">
-    Patient names, identifiers, diagnoses and prescription details are intended to stay on the pharmacist's device during normal use. A commercial licensing system may transmit only licensing-related information such as a license key, installation identifier, extension version and license status. It must not receive patient or prescription data.
-  </div>
+  <h2 class="section-title" data-ar="الخصوصية من أساس التصميم" data-en="Privacy by design"></h2>
+  <div class="notice" data-ar="أسماء المرضى ومعرّفاتهم وتشخيصاتهم وتفاصيل الوصفات مصممة لتبقى على جهاز الصيدلي أثناء الاستخدام الطبيعي. قد يرسل نظام الترخيص التجاري معلومات متعلقة بالترخيص فقط، مثل مفتاح الترخيص ومعرّف تثبيت عشوائي وإصدار الإضافة وحالة الترخيص. ولا تُرسل بيانات المرضى أو الوصفات ضمن طلبات الترخيص." data-en="Patient names, identifiers, diagnoses and prescription details are intended to stay on the pharmacist's device during normal use. A commercial licensing system may transmit only licensing-related information such as a license key, installation identifier, extension version and license status. It must not receive patient or prescription data."></div>
 </section>
 </main>
 
-<footer>
-  <div class="footerrow">
-    <div>© 2026 CDS AutoFill — by Dr. Ali</div>
-    <div><a href="privacy.html">Privacy Policy</a></div>
-  </div>
-</footer>
+<footer><div class="footerrow"><div>© 2026 CDS AutoFill — by Dr. Ali</div><div><a href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy"></a></div></div></footer>
 </div>
+<script src="lang.js"></script>
 </body>
 </html>
