@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>تم الدفع — CDS AutoFill</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="styles.css">
+<script>(function(){const l=localStorage.getItem('cdsSiteLang')||'ar';document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';})();</script>
+<style>
+.success-page{min-height:100vh;display:grid;place-items:center;padding:34px 18px;position:relative;overflow:hidden}
+.success-shell{width:min(760px,100%);position:relative;z-index:2}
+.success-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.success-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.success-brand img{width:48px;height:48px;border-radius:14px;box-shadow:0 12px 35px rgba(0,0,0,.28)}
+.success-brand strong{display:block;font-size:18px}.success-brand small{display:block;opacity:.65;margin-top:2px}
+.success-card{background:rgba(10,23,39,.84);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:28px;padding:34px;box-shadow:0 30px 90px rgba(0,0,0,.35)}
+.success-icon{width:76px;height:76px;border-radius:24px;display:grid;place-items:center;margin:0 auto 20px;font-size:38px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.28)}
+.success-card h1{text-align:center;font-size:clamp(28px,5vw,42px);margin:0 0 10px}.success-card>.sub{text-align:center;max-width:590px;margin:0 auto 28px;opacity:.72;line-height:1.8}
+.license-box{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.035);border-radius:20px;padding:18px;margin-top:18px}
+.license-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;font-size:13px;opacity:.7}
+.license-key{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;direction:ltr;text-align:center;word-break:break-all;font-size:18px;font-weight:800;letter-spacing:.5px;background:#07111f;border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,.07)}
+.success-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.success-actions button,.success-actions a{min-height:50px;border-radius:14px;border:0;text-decoration:none;display:flex;align-items:center;justify-content:center;font-weight:800;cursor:pointer}.copy-btn{background:linear-gradient(135deg,#31d7ff,#4f7cff);color:#04111d}.home-btn{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.08)!important}
+.license-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.meta-item{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:12px;text-align:center}.meta-item span{display:block;font-size:11px;opacity:.6;margin-bottom:5px}.meta-item b{font-size:13px}
+.status-box{text-align:center;padding:22px;border-radius:18px;background:rgba(255,255,255,.035);border:1px dashed rgba(255,255,255,.12)}.spinner{width:36px;height:36px;margin:0 auto 12px;border:3px solid rgba(255,255,255,.12);border-top-color:#31d7ff;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.error-state .success-icon{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.28)}.error-message{color:#ffb4b4;text-align:center;margin-top:12px;line-height:1.7}
+.notice{font-size:12px;opacity:.58;text-align:center;margin-top:18px;line-height:1.7}
+@media(max-width:620px){.success-card{padding:24px 18px;border-radius:22px}.success-actions{grid-template-columns:1fr}.license-meta{grid-template-columns:1fr}.success-top{align-items:flex-start}.license-key{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="page-glow glow-a"></div><div class="page-glow glow-b"></div>
+<main class="success-page">
+  <div class="success-shell">
+    <div class="success-top">
+      <a class="success-brand" href="./"><img src="icon.png" alt="CDS AutoFill"><span><strong>CDS AutoFill</strong><small>Smart Prescription Entry</small></span></a>
+      <button class="langbtn" id="langToggle" type="button">English</button>
+    </div>
+
+    <section class="success-card" id="card">
+      <div id="loadingState">
+        <div class="success-icon">✓</div>
+        <h1 data-ar="تم استلام عملية الدفع" data-en="Payment received"></h1>
+        <p class="sub" data-ar="نتحقق الآن من عملية الدفع ونجهز مفتاح تفعيل CDS AutoFill الخاص بك." data-en="We are verifying your payment and preparing your CDS AutoFill license key."></p>
+        <div class="status-box"><div class="spinner"></div><b data-ar="جاري تجهيز الرخصة…" data-en="Preparing your license…"></b></div>
+      </div>
+
+      <div id="successState" hidden>
+        <div class="success-icon">✓</div>
+        <h1 data-ar="تم الدفع بنجاح" data-en="Payment successful"></h1>
+        <p class="sub" data-ar="رخصتك جاهزة. انسخ المفتاح وأدخله في نافذة CDS AutoFill لتفعيل الخطة." data-en="Your license is ready. Copy the key and enter it in CDS AutoFill to activate your plan."></p>
+        <div class="license-box">
+          <div class="license-label"><span data-ar="مفتاح التفعيل" data-en="License key"></span><span id="testBadge"></span></div>
+          <div class="license-key" id="licenseKey">—</div>
+          <div class="success-actions">
+            <button class="copy-btn" id="copyBtn" type="button" data-ar="نسخ مفتاح التفعيل" data-en="Copy license key"></button>
+            <a class="home-btn" href="./" data-ar="العودة للموقع" data-en="Back to website"></a>
+          </div>
+          <div class="license-meta">
+            <div class="meta-item"><span data-ar="الخطة" data-en="Plan"></span><b id="plan">—</b></div>
+            <div class="meta-item"><span data-ar="الأجهزة" data-en="Devices"></span><b id="devices">—</b></div>
+            <div class="meta-item"><span data-ar="تاريخ الانتهاء" data-en="Expires"></span><b id="expires">—</b></div>
+          </div>
+        </div>
+        <p class="notice" data-ar="احتفظ بالمفتاح في مكان آمن. لا يتم إرسال بيانات المرضى أو الوصفات إلى نظام الدفع أو الترخيص." data-en="Keep your key in a safe place. Patient and prescription data are not sent to the payment or licensing system."></p>
+      </div>
+
+      <div id="errorState" class="error-state" hidden>
+        <div class="success-icon">!</div>
+        <h1 data-ar="تعذر جلب الرخصة" data-en="Couldn't retrieve license"></h1>
+        <p class="sub" data-ar="قد يستغرق وصول إشعار الدفع عدة ثوانٍ. جرّب إعادة المحاولة." data-en="The payment notification can take a few seconds. Please try again."></p>
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-actions">
+          <button class="copy-btn" id="retryBtn" type="button" data-ar="إعادة المحاولة" data-en="Try again"></button>
+          <a class="home-btn" href="./" data-ar="العودة للموقع" data-en="Back to website"></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<script src="lang.js"></script>
+<script src="success.js"></script>
+</body>
+</html>
