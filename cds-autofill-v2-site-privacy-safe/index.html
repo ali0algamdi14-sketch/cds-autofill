@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08111f" />
+  <meta name="description" content="CDS AutoFill — Smart prescription entry for Saudi CDS workflow. Built by Ali Alghamdi." />
+  <meta property="og:title" content="CDS AutoFill — By Ali Alghamdi" />
+  <meta property="og:description" content="Faster, safer, smarter prescription entry — local-first and pharmacist reviewed." />
+  <meta property="og:type" content="website" />
+  <title>CDS AutoFill — By Ali Alghamdi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-glow page-glow-one"></div>
+  <div class="page-glow page-glow-two"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="CDS AutoFill home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img"><path d="M8 7.5h16a3.5 3.5 0 0 1 3.5 3.5v10A3.5 3.5 0 0 1 24 24.5H8A3.5 3.5 0 0 1 4.5 21V11A3.5 3.5 0 0 1 8 7.5Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 16h10M16 11v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span>
+          <strong>CDS AutoFill</strong>
+          <small data-i18n="brandTag">Smart Prescription Entry</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#how" data-i18n="navHow">How it works</a>
+        <a href="#privacy" data-i18n="navPrivacy">Privacy</a>
+        <a href="#creator" data-i18n="navCreator">Creator</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">
+          <span class="lang-dot"></span>
+          <span id="languageLabel">العربية</span>
+        </button>
+        <a class="button button-small button-ghost" href="#how" data-i18n="navDemo">See workflow</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            <span data-i18n="eyebrow">Built for real pharmacy workflow</span>
+          </div>
+          <h1>
+            <span class="hero-product">CDS AutoFill</span>
+            <span class="hero-headline" data-i18n="heroHeadline">Smart prescription entry for Saudi CDS workflow.</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">A local-first Chrome extension that helps pharmacists review prescription data and fill supported CDS fields faster — with the pharmacist always in control.</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#how">
+              <span data-i18n="heroPrimary">See how it works</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6.5 4.5 12 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button button-secondary" href="#features" data-i18n="heroSecondary">Explore features</a>
+          </div>
+
+          <div class="trust-row" aria-label="Product principles">
+            <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5.5 10 3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustLocal">Local processing</span></span>
+            <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.7 16 5v4.3c0 3.8-2.5 6.5-6 8-3.5-1.5-6-4.2-6-8V5l6-2.3Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m7.2 9.8 1.8 1.8 3.8-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="trustReview">Pharmacist review first</span></span>
+            <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h14M10 3v14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span data-i18n="trustIndependent">Independent software</span></span>
+          </div>
+
+          <a class="hero-privacy-banner" href="privacy.html" aria-label="Privacy policy">
+            <span class="hero-privacy-icon" aria-hidden="true">🔒</span>
+            <span><strong data-i18n="heroPrivacyTitle">Privacy first</strong><small data-i18n="heroPrivacyBody">Prescription parsing stays on your device. Patient prescription content is not sent to an external service for parsing.</small></span>
+            <b data-i18n="heroPrivacyLink">Privacy policy</b>
+          </a>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay-1" aria-label="CDS AutoFill interface preview">
+          <div class="browser-frame">
+            <div class="browser-topbar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-address"><span class="lock-dot"></span> CDS workflow</div>
+              <div class="browser-menu">•••</div>
+            </div>
+            <div class="browser-body">
+              <aside class="mock-sidebar">
+                <div class="mock-logo">CDS</div>
+                <span class="mock-nav active"></span>
+                <span class="mock-nav"></span>
+                <span class="mock-nav"></span>
+                <span class="mock-nav"></span>
+              </aside>
+
+              <div class="mock-content">
+                <div class="mock-page-title">
+                  <div><span class="line lg"></span><span class="line sm"></span></div>
+                  <span class="pill neutral" data-i18n="mockStatus">Review mode</span>
+                </div>
+
+                <div class="autofill-card">
+                  <div class="autofill-head">
+                    <div class="autofill-brand">
+                      <span class="mini-mark">+</span>
+                      <div><strong>CDS AutoFill</strong><small data-i18n="mockReady">Prescription detected</small></div>
+                    </div>
+                    <span class="pill success"><span class="status-dot"></span><span data-i18n="mockDemoBadge">Synthetic demo data</span></span>
+                  </div>
+
+                  <div class="mock-fields">
+                    <div class="mock-field"><span data-i18n="mockPatient">Patient</span><strong data-i18n="mockPatientDemo">Synthetic demo patient</strong></div>
+                    <div class="mock-field"><span data-i18n="mockPhysician">Physician</span><strong data-i18n="mockPhysicianDemo">Synthetic demo physician</strong></div>
+                    <div class="mock-field mock-field-split"><div><span data-i18n="mockId">Prescription ID</span><strong>DEMO-000001</strong></div><div><span data-i18n="mockGender">Gender</span><strong>—</strong></div></div>
+                    <div class="mock-field mock-field-split"><div><span data-i18n="mockDrug">Medication</span><strong data-i18n="mockDrugDemo">Demo medication</strong></div><div><span data-i18n="mockDuration">Duration</span><strong>30 days</strong></div></div>
+                  </div>
+
+                  <div class="mock-actions">
+                    <button type="button" class="fake-btn secondary" data-i18n="mockEdit">Review fields</button>
+                    <button type="button" class="fake-btn primary" data-i18n="mockFill">Fill CDS fields</button>
+                  </div>
+                </div>
+
+                <div class="record-strip">
+                  <span><span class="record-dot"></span><span data-i18n="mockRecording">Recording session</span></span>
+                  <strong>12</strong>
+                  <small data-i18n="mockRxCount">prescriptions</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="creator-chip">
+            <span class="creator-avatar">AA</span>
+            <span><small data-i18n="creatorChipLabel">Built by</small><strong>Ali Alghamdi</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-strip section-tight">
+      <div class="container logo-strip-inner reveal">
+        <span class="logo-strip-label" data-i18n="principlesLabel">Designed around four principles</span>
+        <div class="principle"><span>01</span><strong data-i18n="principle1">Speed</strong></div>
+        <div class="principle"><span>02</span><strong data-i18n="principle2">Accuracy</strong></div>
+        <div class="principle"><span>03</span><strong data-i18n="principle3">Privacy</strong></div>
+        <div class="principle"><span>04</span><strong data-i18n="principle4">Control</strong></div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker" data-i18n="featuresKicker">What it does</span>
+          <h2 data-i18n="featuresTitle">Less repetitive entry. More focused review.</h2>
+          <p data-i18n="featuresIntro">CDS AutoFill is designed to reduce repetitive prescription data entry while keeping review and submission with the pharmacist.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h9l3 3V20.5H6z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15 3.5v4h4M9 11h6M9 15h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3 data-i18n="featureExtractTitle">Smart prescription extraction</h3>
+            <p data-i18n="featureExtractBody">Reads the copied prescription text, identifies supported fields, and presents them for review before filling.</p>
+            <div class="mini-code"><span>Patient Name</span><strong>→</strong><em data-i18n="featureExtractCode">Preserved in source order</em></div>
+          </article>
+
+          <article class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.6-2.9 7.8-7 9.8C7.9 18.8 5 15.6 5 11V6l7-3Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.2 12.1 11 13.9l4-4.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 data-i18n="featureLocalTitle">Local-first processing</h3>
+            <p data-i18n="featureLocalBody">Prescription data is processed on the pharmacist's device. The patient-data workflow does not require external processing.</p>
+          </article>
+
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.5v5l3 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 data-i18n="featureDurationTitle">Smart Duration</h3>
+            <p data-i18n="featureDurationBody">Uses current-prescription instructions as a local heuristic to help calculate duration for review.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v14H5z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3 data-i18n="featureLogTitle">Prescription session log</h3>
+            <p data-i18n="featureLogBody">Start a local counting session, track processed prescriptions, clear the log, and export supported records to CSV.</p>
+          </article>
+
+          <article class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16H7z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m9.5 12 1.6 1.6 3.7-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3 data-i18n="featureReviewTitle">Review before fill</h3>
+            <p data-i18n="featureReviewBody">Extracted values stay editable. The pharmacist reviews the prescription before supported CDS fields are filled.</p>
+          </article>
+
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 8.5h15v10h-15zM8 5.5h8v3H8z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 13h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3 data-i18n="featureWorkflowTitle">Built around CDS workflow</h3>
+            <p data-i18n="featureWorkflowBody">Focused on practical prescription-entry steps without turning the extension into an automated dispensing decision maker.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="how">
+      <div class="container how-grid">
+        <div class="section-heading left reveal">
+          <span class="section-kicker light" data-i18n="howKicker">Simple workflow</span>
+          <h2 data-i18n="howTitle">From prescription to reviewed CDS fields in three steps.</h2>
+          <p data-i18n="howIntro">No complicated setup in the daily workflow. Copy, review, then fill supported fields.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step-number">01</span>
+            <div><h3 data-i18n="step1Title">Copy the prescription</h3><p data-i18n="step1Body">Copy the prescription text from the supported prescription view.</p></div>
+          </article>
+          <article class="step reveal reveal-delay-1">
+            <span class="step-number">02</span>
+            <div><h3 data-i18n="step2Title">Review extracted fields</h3><p data-i18n="step2Body">Check names, prescription ID, medication details, gender, duration, and other supported values.</p></div>
+          </article>
+          <article class="step reveal reveal-delay-2">
+            <span class="step-number">03</span>
+            <div><h3 data-i18n="step3Title">Fill supported CDS fields</h3><p data-i18n="step3Body">After pharmacist confirmation, CDS AutoFill places the reviewed values into supported fields.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="container privacy-grid">
+        <div class="privacy-visual reveal">
+          <div class="privacy-ring ring-one"></div>
+          <div class="privacy-ring ring-two"></div>
+          <div class="privacy-core">
+            <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 5 35 10v9c0 8.6-5.4 14.7-13 18.5C14.4 33.7 9 27.6 9 19v-9l13-5Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16.5 21.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <strong data-i18n="privacyCore">Local-first</strong>
+          </div>
+          <span class="orbit-label orbit-one" data-i18n="privacyOrbit1">Prescription text</span>
+          <span class="orbit-label orbit-two" data-i18n="privacyOrbit2">Review</span>
+          <span class="orbit-label orbit-three" data-i18n="privacyOrbit3">CDS fields</span>
+        </div>
+
+        <div class="section-heading left reveal reveal-delay-1">
+          <span class="section-kicker" data-i18n="privacyKicker">Privacy by design</span>
+          <h2 data-i18n="privacyTitle">Patient-data processing stays on the device.</h2>
+          <p data-i18n="privacyIntro">The prescription parsing workflow is designed to run locally. CDS AutoFill does not need to send patient prescription content to an external service for parsing.</p>
+          <div class="privacy-points">
+            <div><span class="check">✓</span><p><strong data-i18n="privacyPoint1Title">No name-based gender guessing</strong><small data-i18n="privacyPoint1Body">Gender is read from the prescription field when available.</small></p></div>
+            <div><span class="check">✓</span><p><strong data-i18n="privacyPoint2Title">No automated dispensing decision</strong><small data-i18n="privacyPoint2Body">The pharmacist remains responsible for review and submission.</small></p></div>
+            <div><span class="check">✓</span><p><strong data-i18n="privacyPoint3Title">No historical dispense checking</strong><small data-i18n="privacyPoint3Body">The extension does not query previous dispensing history or early-dispense eligibility.</small></p></div>
+          </div>
+          <a class="button button-primary privacy-policy-button" href="privacy.html"><span data-i18n="privacyPolicyButton">Read the full privacy policy</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section creator-section" id="creator">
+      <div class="container">
+        <div class="creator-card reveal">
+          <div class="creator-card-copy">
+            <span class="section-kicker light" data-i18n="creatorKicker">Creator</span>
+            <h2><span data-i18n="creatorTitlePrefix">Built by</span> <span class="creator-name">Ali Alghamdi</span></h2>
+            <p data-i18n="creatorBody">CDS AutoFill was created from a pharmacy workflow perspective: reduce repetitive entry, preserve review, and make the process clearer without replacing professional judgment.</p>
+            <div class="creator-meta">
+              <span data-i18n="creatorRole">Pharmacist</span>
+              <i></i>
+              <span data-i18n="creatorBuilder">Product builder</span>
+              <i></i>
+              <span>CDS AutoFill</span>
+            </div>
+          </div>
+          <div class="signature-card" aria-label="Ali Alghamdi">
+            <span class="signature-monogram">AA</span>
+            <strong>Ali Alghamdi</strong>
+            <small data-i18n="signatureLabel">Creator of CDS AutoFill</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div class="section-heading left reveal">
+          <span class="section-kicker" data-i18n="faqKicker">FAQ</span>
+          <h2 data-i18n="faqTitle">Clear by design.</h2>
+          <p data-i18n="faqIntro">A few important points about what CDS AutoFill is — and what it is not.</p>
+        </div>
+        <div class="faq-list reveal reveal-delay-1">
+          <details open>
+            <summary data-i18n="faq1Q">Does CDS AutoFill submit prescriptions automatically?</summary>
+            <p data-i18n="faq1A">No. It assists with review and supported field entry. The pharmacist reviews the data and remains responsible for the workflow.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq2Q">Does it send patient data to an external AI service?</summary>
+            <p data-i18n="faq2A">The patient prescription parsing workflow is designed to process data locally on the device.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq3Q">Is CDS AutoFill an official SFDA, Raqeeb, or Ministry of Health product?</summary>
+            <p data-i18n="faq3A">No. CDS AutoFill is independent software and is not affiliated with or endorsed by SFDA, Raqeeb, the Ministry of Health, or any government entity.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container">
+        <div class="cta-card reveal">
+          <span class="cta-watermark">CDS</span>
+          <div>
+            <span class="section-kicker light" data-i18n="ctaKicker">Faster • Safer • Smarter</span>
+            <h2 data-i18n="ctaTitle">A cleaner prescription-entry workflow starts with better tools.</h2>
+            <p><span data-i18n="ctaBy">Built by</span> <strong>Ali Alghamdi</strong></p>
+          </div>
+          <a class="button button-light" href="#top"><span data-i18n="ctaButton">Back to top</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 12 5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <strong>CDS AutoFill</strong>
+        <span><span data-i18n="footerBuilt">Built by</span> <b>Ali Alghamdi</b></span>
+      </div>
+      <p data-i18n="footerDisclaimer">Independent software. Not affiliated with SFDA, Raqeeb, the Ministry of Health, or any government entity.</p>
+      <a class="footer-privacy-link" href="privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+      <span class="footer-year">© <span id="year"></span> Ali Alghamdi</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
