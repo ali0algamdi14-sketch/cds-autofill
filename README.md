@@ -1,31 +1,28 @@
-# CDS AutoFill — V2 Website
+# CDS AutoFill — Website Commercial V3
 
-A standalone bilingual (Arabic/English) GitHub Pages-ready marketing site for **CDS AutoFill**, built around the project's existing identity while keeping the current live site untouched.
+موقع تسويقي ثنائي اللغة (عربي / إنجليزي) مخصص للعرض على GitHub Pages.
 
-## Files
-- `index.html` — page structure and content
-- `styles.css` — responsive visual design
-- `script.js` — Arabic/English switcher, RTL/LTR handling, reveal animations
+## الملفات
+- `index.html`: الموقع التجاري وصفحة المحاكاة وطلب التجربة.
+- `styles.css`: التصميم المتجاوب.
+- `script.js`: تغيير اللغة والمحاكاة والتحضير المحلي لرسالة طلب التجربة.
+- `privacy.html`: سياسة الخصوصية المحدّثة.
+- `favicon.svg`: رمز الموقع.
+- `social-preview.png`: صورة المشاركة المتوفرة مسبقًا في مستودع GitHub ويُفضّل إبقاؤها؛ ليست ضمن الحزمة.
 
-## Deploy as a second GitHub Pages site
-1. Create a **new** public repository, e.g. `cds-autofill-v2`.
-2. Upload the files in this folder to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose `main` and `/ (root)`.
-6. Save. GitHub Pages will publish the new site separately from the existing `cds-autofill` site.
+## أهم الفروق
+- إزالة رابط إدارة التراخيص الخاصة من الموقع العام، مع بقاء عنوان لوحة المالك مستقلاً ومحميًا.
+- تجربة تفاعلية ببيانات وهمية لحساب المدة: 30 كبسولة BID = 15 يومًا، و60 كبسولة BID = 30 يومًا.
+- إبراز اختيار الصرفيات الحالية وSmart Duration وPartial Dispense والتحقق من الترخيص.
+- نموذج تحضير رسالة طلب تجريبي يعمل محليًا ويتيح نسخها وإرسالها عبر LinkedIn؛ **لا يوجد إرسال تلقائي أو تسجيل leads على خادم**.
+- رابط سياسة الخصوصية وتحديث معلومات الترخيص والاحتفاظ بالسجلات المحلية.
+- لغة عربية/إنجليزية ونسخة متجاوبة مع الهواتف.
 
-## Important product statements used on the site
-- Independent software; not affiliated with SFDA, Raqeeb, the Ministry of Health, or any government entity.
-- Patient prescription parsing is described as local-first.
-- Pharmacist review remains required before supported fields are filled.
-- The site does not claim automated dispensing decisions or historical dispense eligibility checks.
+## قبل نشر رسمي أو إطلاق مدفوع
+- استبدال نموذج LinkedIn بنظام جمع طلبات فعلي فقط بعد توفير جهة اتصال / منصة معتمدة وسياسة خصوصية مناسبة.
+- تسجيل فيديو استخدام حقيقي ببيانات وهمية؛ الموقع حاليًا يقدم محاكاة تفاعلية بدلاً من الادعاء وجود فيديو.
+- التحقق من التجربة البشرية بصريًا على متصفحات الجوال وسطح المكتب.
+- لا تدّعِ أن RC2 إصدار Stable أو أن المنتج معتمد رسميًا.
 
-## Brand
-**CDS AutoFill**  
-Smart Prescription Entry for Saudi CDS Workflow  
-**Built by Ali Alghamdi**
-
-
-## Privacy
-A dedicated `privacy.html` page explains the local-first patient-data workflow and review boundaries.
+## النشر
+رفع الملفات إلى جذر مستودع `ali0algamdi14-sketch/cds-autofill` مع الإبقاء على `social-preview.png` الأصلي ثم الانتظار حتى انتهاء نشر GitHub Pages.
